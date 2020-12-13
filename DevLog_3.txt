@@ -1,0 +1,168 @@
+///////////////////////////////////////////////////////////////
+///////////////////////SOMEKIDS DEV LOGS//////6-12-20//////////
+/////////////////PROJECT : FROM THE CLOUDS/////////////////////
+//////////////////////VERSION 1.1//////////////////////////////
+///////////////////////////////////////////////////////////////
+
+		PROJECT STATUS
+-Basic item framework has been implemented into the engine
+-Greatly improved the user interface and made a frame to build the players inventory HUD
+-Didn't complete the weekly goals 
+	-Items are implemented but the inventory display system was not finished due to focused effor on starting dev-vlogs
+
+		KNOWN BUGS
+-Found a bug when serializing a double it is either being stored incorectly or deserialized incorrectly
+-Found a bug when adding check boxes to a checkpanel the boxes are rendered relative to the corner of the window not relative to their parents position.
+
+		FIXED BUGS
+-Fixed a bug in the GUI Framework where panels were incorrectly justified
+
+		NEW CONCEPTS / IDEAS
+-Druid inspired class
+	-a doctor dolittle inspired character, a child that can talk to animals and creatures
+	-later has the ability to summon them
+-Have a Wind direction that changes every day
+	- the clouds will spread in the direction of the wind
+
+////////////////NEW THIS WEEK/////////////////////////////////////////
+		ENGINE DEVELOPMENT
+-Created new child class of animal for Flying and walking Animals
+	-allows for flying animals to have there own render method above rocks and trees
+	-walking animals will walk behind rocks / trees / lamps 
+-Improved SaveGave Framework
+	-perviously was only saving the levels tilemap now saves
+		-tilemap - trees -rocks -staticlights
+-Added checkBox component to the GUI Framework;
+	-a toggleable interactalbe click area
+	-toggles icon between checked and unchecked
+-Added CheckBox Pannel component to the GUI Framework;
+	-capable of holding multiple checkboxes
+	-will toggle all other sibling checkboxs off when a new selection is made
+-Added Image Component to the GUI Framework
+-Added CheckBox pannel to controll screen size in the settings menu
+-Added Ability for player to trample bunnys to death
+	-bunny plays death animation relative to their direction upon being killed
+	-player spawns blood particles upon killing bunny
+	-bunny corpse ramins on screen for some time before being removed
+-Added ability for player to shoot bunnys to death
+	-projectile is removed upon killing bunny and spwans blood particles
+-Added new 'blood' particle type
+	-blood particles stick to surfaces upon contact, effectivly paint the walls with blood
+	-blood particles are launched with a parabolic outward tragectory from the corpse
+		-blood fountain
+-Added new constructors for particle spawners
+	-spawners can now be constructed with a specified speed  
+-Added new constructors for GUI buttons, images, textboxes, and labels
+	-new constructor now takes a justifcation paramater so these items can be created relative to the screen size
+-Completely overhauled the GameMode framework
+	-Previously each game mode was calling the games render method with varying parameters
+	-Now the game has no rener mode instead each gameMode has its own unique update and render methods
+	-This creates a much beter API as each GameMode can handle its own HUD, Levels (if any), Players, Character, game rules, etc
+		-Previously had to change gameMode to change the hud now huds can be seleted from whithin each mode
+		-i.e. menuMode has a bunch of menuHuds, singlePlayer has EscapeMenuHud and PlayerHud
+		-these can be toggle by within their corrosponding game modes.
+-Added new Cinimatic Game Mode
+-Added new 'mechanics' entity type
+	-added RawImage and RawAnimation classes to handle rendering cinimatic animations / images within the engin
+	- can be extended later adding in render support for the hud overlay if needed;
+-Added new cloud entity 
+	-clouds will be the basis of mob spawning.
+-Added new FireWork projectile 
+	-added new sparkler particle spawner for the firework fuze
+-Added new firework particle system 
+	-added circle fireworks
+	-added multiCircle fireworks
+-Added new particle clours to the particle system
+	-red, yellow, green, blue, purple, teal
+	-added a range of sized particles for each colour
+-Added new item class that extends entity
+	-items will be devided into five main sub types
+	-apparel, armor, equipment, food, potions,
+	-
+-Added apple tree class
+	-spawns apple items when clicked if there are apples on the tree to drop 
+	-regrows apples after apples are harvested
+-Improved UIManager animation method
+	-now uses a list of panels so it can handle animating multiple panels at the same time
+	-previously the panels would get stuck if player clicked a new animation before the previous animation finished
+
+
+
+		NEW SPRITES
+-Created new Apple tree sprite class
+	-created 8 apple tree sprites
+-created new apparel sprite class
+	-created 9 apparel sprites 
+-created armour sprite class
+	-created 5 apprel sprites
+-created equipment sprite class
+	-created 8 equipment sprites
+-created fruit sprite class
+	-created 8 fruit sprites
+-created new potion sprite class
+	-created 8 new potion sprites
+-created a new sprite class for clouds
+	-created 16 new medium sized cloud sprites
+	-created 16 new small sized cloud sprites
+	-created 16 new tiny sized cloud sprites
+-crated new fire work sprite class
+	-Created 28 new fire work Sprites
+-created 6 new button sprites to toggle the players hud
+	-health, inventory, level, equipment, armor, stats panel buttons
+-created 6 new inventory panel backgrounds
+	-created 3 sizes for each background 
+-Created new menu button background Sprite
+-Created new menu background sprite
+-Created new hud controll Background Sprite
+-Created new title bar sprite
+-Created new loading background sprite
+-Created checked and unchecked sprites for the checkBox GUI
+-Created 8 directional bunny deth animations
+-Created 60 frame card house animation
+	-fames complied into single frame strip
+-created 31 frame logo fade in animation
+-created 51 frame logo colapse animation
+-created 31 frame logo fade out animation
+
+
+
+		HOUSE KEEPING
+-reorded animal file structure into walking, flying sub folders
+-added justifcation enums for simplified constructors
+-fixed main menu to use new justification framework
+-fixed map editor menu to use new justifcation framework
+-fixed game escape menu to use new justifcation framework
+-fixed editor escape menu to use new justification framework
+-fixed singlePlayerMode to use the new mode framework
+-fixed menumode to use the new modeFramework
+-Added new bunny animation to intro sceen
+
+
+
+		WEEKLY GOALS
+/////////////////////////////////////////////////////////
+	Over due Goals
+-Finish the Inventory framework
+-Finish inventory panel in the players hud
+	New Goals
+-Add survival mechanics to the player
+	-must eat, drink, sleep to survive
+-Add meat item that can be harvested from dead animals
+-Add firePits with fire animation
+	-will be used for cooking food
+-Create 'Game Over' hud to be displayed when the player is killed
+	-leads back to the main menu
+
+//////////////EXTRA GOALS/////////////////////////
+-Created player death animations 
+	-death by, melee, starvation, thirst, crushed, 
+
+
+
+
+
+
+
+
+
+
