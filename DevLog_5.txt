@@ -1,0 +1,107 @@
+///////////////////////////////////////////////////////////////
+///////////////////////SOMEKIDS DEV LOGS//////24-12-20//////////
+/////////////////PROJECT : FROM THE CLOUDS/////////////////////
+//////////////////////VERSION 1.3//////////////////////////////
+///////////////////////////////////////////////////////////////
+
+		PROJECT STATUS
+
+
+		KNOWN BUGS
+-Found a bug when serializing a double it is either being stored incorectly or deserialized incorrectly
+-Found a bug when adding check boxes to a checkpanel the boxes are rendered relative to the corner of the window not relative to their parents position.
+-Droped tree fruit falls renders behind trunk when falling infront of it
+-When equiping a chest plate if another chest plate is already equip it is overwritten and one is lost in memory
+
+		FIXED BUGS
+-Fixed a bug in the inventory system where new items added were creating a new slot and adding to the count of other items of the same type
+
+		NEW CONCEPTS / IDEAS
+
+
+////////////////NEW THIS WEEK/////////////////////////////////////////
+		ENGINE DEVELOPMENT
+-Added loot chest framework
+	-added aromor loot chest
+	-added equipment loot chest
+	-added potion loot chest
+	-added food loot chest
+-Added armor Items
+	-iron helmet
+	-iron guantlets
+	-iron boots
+	-iron chest
+	-iron greaves
+-Added equipment Items
+	-iron pick
+	-iron axe
+	-iron hammer
+	-iron hoe
+	-iron shovel
+-Added potion Items
+	-mana potion
+	-health potion
+	-food potion
+	-drink potion
+	-stamina potion
+-Added Scroll Box Framework	
+	-can not add panels and components to a scroll box that controlls their offset
+-Added mouse wheel support 
+-Added custom mouse cursor
+	-added custom mouse clicked cursor
+-Added loot chest pannel to the map editor
+-Added save / serialize methods for loot chests 
+-Added Armor slot Framework
+-Added flashing red border effect when player is taking damage
+-Added equipment Slot framework
+	
+
+		NEW SPRITES
+-Created walking equip sprites
+	-pick equip
+	-axe equip
+-Created using equipment sprites
+	-swinging axe 
+	-swinging pick
+-Created new empty armor slots
+	-helmet slot
+	-chest slot
+	-cape slot
+	-belt slot
+	- left / right shoulders
+	- left / right armbraces
+	- left / right gauntlets
+	- left / right greaves
+	- left / right boots
+-Created new 49 frame taking damage animation
+	-created small / medium / large versions  
+
+
+
+
+		AUDIO
+-created new menu theme
+
+		HOUSE KEEPING
+
+
+
+		WEEKLY GOALS
+/////////////////////////////////////////////////////////
+	New Goals
+-Added equipable pick / axe that will be required when cutting trees or mining rocks
+-Add cuttable trees that give wooden logs when cut down
+-Add minable rocks that give stone/ copper / iron depending on which rock is mined
+-Added character sprint mechanic that drains the players stamina
+-Add completed set of iron armor items
+
+
+
+
+
+
+
+
+
+
+
